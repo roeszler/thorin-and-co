@@ -2,7 +2,8 @@
 Import modules - including Flask class
 """
 import os
-from flask import Flask, render_template  # capital F indicates its a class name
+# capital F indicates its a class name
+from flask import Flask, render_template
 
 # create an instance of Flask class with argument as flask module
 # __name__. Flask needs this so that it knows where to look for
@@ -20,7 +21,7 @@ def index():
     then Flask triggers this index function returns "Hello, World".
     """
     # return "<h1>Hello,</h1> <h2>World!</h2>"
-    return render_template("index.html")  # 
+    return render_template("index.html")  # links root directory to templates/
 
 # We're using the os module from the standard library to get the 'IP'
 # environment variable if it exists, but set a default value 0.0.0.0
