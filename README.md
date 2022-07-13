@@ -1,4 +1,20 @@
 ![YK logo](assets/pics/yodaKode-sml.png)
+
+
+Creating and running a Flask application.
+
+* $ Pip3 install flask
+* $ touch run.py
+  * from flask import Flask (capital F indicates its a class name)
+  * app = Flask(__name__)
+  * @app.route(“/“)
+  * def index():
+	    return “Hello, World!”
+
+* python3 run.py
+* ctrl + C (exits the terminal)
+
+
 # Suggestions for a good README
 
 https://www.makeareadme.com/#suggestions-for-a-good-readme
