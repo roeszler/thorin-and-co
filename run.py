@@ -28,9 +28,25 @@ def index():
 @app.route("/about")
 def about():
     """
-    Define the about.html pathway
+    Define the about.html file pathway
     """
     return render_template("about.html")
+
+
+@app.route("/contact")
+def contact():
+    """
+    Define the contact.html file pathway
+    """
+    return render_template("contact.html")
+
+
+@app.route("/careers")
+def careers():
+    """
+    Define the careers.html file pathway
+    """
+    return render_template("careers.html")
 
 
 # We're using the os module from the standard library to get the 'IP'
