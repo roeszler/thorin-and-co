@@ -1,5 +1,4 @@
-![YK logo](assets/pics/yodaKode-sml.png)
-
+![YK logo](static/img/yodaKode-sml.png)
 
 Creating and running a Flask application.
 
