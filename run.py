@@ -18,10 +18,20 @@ app = Flask(__name__)
 def index():
     """
     When we try to browse to the root directory, as indicated by the "/",
-    then Flask triggers this index function returns "Hello, World".
+    then Flask triggers this index function returns "Hello, World" and/or
+    the index.html file.
     """
     # return "<h1>Hello,</h1> <h2>World!</h2>"
     return render_template("index.html")  # links root directory to templates/
+
+
+@app.route("/about")
+def about():
+    """
+    Define the about.html pathway
+    """
+    return render_template("about.html")
+
 
 # We're using the os module from the standard library to get the 'IP'
 # environment variable if it exists, but set a default value 0.0.0.0
