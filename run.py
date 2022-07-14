@@ -4,7 +4,9 @@ Import modules - including Flask class
 import os
 import json
 # capital F indicates its a class name
-from flask import Flask, render_template, request, flash
+from flask import (
+    Flask, render_template, request, flash
+)
 
 # create an instance of Flask class with argument as flask module
 # __name__. Flask needs this so that it knows where to look for
