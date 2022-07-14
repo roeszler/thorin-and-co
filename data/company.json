@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Thorin II Oakenshield",
+        "description": "In the year TA 2746, Thorin II was born to Dwarven prince Thráin II in the mountain city of The Lonely Mountain. Early in his youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA 2770. While in exile, he quickly grew to become a capable warrior. This was demonstrated when he participated in the Battle of Azanulbizar in TA 2799. He marched with one of the Dwarven armies beneath the East-gate of Moria. At some point in the fighting, his shield broke, and using an oaken tree branch found on the floor as a shield, he gained the epithet 'Oakenshield', which would remain with him even in death.",
+        "image_source": "{{ url_for('static', filename='/img/ThorinBIG.webp') }}"
+    },
+
+    {
+        "name": "Fíli and Kíli",
+        "description": "Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother Dís. They were also nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing feature was his long nose, the longest of any of the Dwarves in Thorin's company. Fíli and Kíli were the two most active Dwarves of Thorin's company, and apart from Balin, and possibly Bombur, they appeared more frequently as 'individual' characters in J.R.R. Tolkien's novel than the rest of Thorin's companions, who were most often named only in 'group' references to the entire company. While on journeys, Fíli and Kíli both wore blue hoods, and played fiddles. They each carried a spade, presumably to forage, and to aid in building firepits, barriers, and traps. While the books make no mention of Kíli carrying a bow, it is presumed by some readers.",
+        "image_source": "{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}"
+    }
+]

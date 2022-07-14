@@ -2,6 +2,7 @@
 Import modules - including Flask class
 """
 import os
+import json
 # capital F indicates its a class name
 from flask import Flask, render_template
 
@@ -29,8 +30,18 @@ def index():
 def about():
     """
     Define the about.html file pathway
+    Change the <h2> element where called on the about.html
+    Iterates through the list of numbers and creates a paragraph at each
     """
-    return render_template("about.html", variable_name_page_title="About")
+    data = []
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template(
+        "about.html",
+        page_title="About",
+        # list_of_numbers=[1, 2, 3]
+        company=data
+        )
 
 
 @app.route("/contact")
@@ -38,7 +49,7 @@ def contact():
     """
     Define the contact.html file pathway
     """
-    return render_template("contact.html", variable_name_page_title="Contact")
+    return render_template("contact.html", page_title="Contact")
 
 
 @app.route("/careers")
@@ -47,7 +58,7 @@ def careers():
     Define the careers.html file pathway
     """
     return render_template(
-        "careers.html", variable_name_page_title="Come Work With Us!"
+        "careers.html", page_title="Come Work With Us!"
         )
 
 
