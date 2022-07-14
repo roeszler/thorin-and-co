@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Hello Flask</title>
 </head>
 
@@ -93,7 +94,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+                    <p class="copyright text-muted">Copyright &copy; Your next Website <span id="copyright"></span></p>
                 </div>
             </div>
         </div>
@@ -105,6 +106,7 @@
     
     <!-- Custom scripts for this template -->
     <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
+    <script>$("#copyright").text(new Date().getFullYear());</script>
 
 </body>
 </html>
