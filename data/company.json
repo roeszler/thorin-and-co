@@ -1,25 +1,25 @@
 [{
         "name": "Thorin II Oakenshield",
         "description": "In the year TA 2746, Thorin II was born to Dwarven prince Thráin II in the mountain city of The Lonely Mountain. Early in his youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA 2770. While in exile, he quickly grew to become a capable warrior. This was demonstrated when he participated in the Battle of Azanulbizar in TA 2799. He marched with one of the Dwarven armies beneath the East-gate of Moria. At some point in the fighting, his shield broke, and using an oaken tree branch found on the floor as a shield, he gained the epithet 'Oakenshield', which would remain with him even in death.",
-        "image_source": "static/img/ThorinBIG.webp",
+        "image_source": "../static/img/ThorinBIG.webp",
         "url": "thorin"
     },
     {
         "name": "Fíli and Kíli",
         "description": "Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother Dís. They were also nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing feature was his long nose, the longest of any of the Dwarves in Thorin's company. Fíli and Kíli were the two most active Dwarves of Thorin's company, and apart from Balin, and possibly Bombur, they appeared more frequently as 'individual' characters in J.R.R. Tolkien's novel than the rest of Thorin's companions, who were most often named only in 'group' references to the entire company. While on journeys, Fíli and Kíli both wore blue hoods, and played fiddles. They each carried a spade, presumably to forage, and to aid in building firepits, barriers, and traps. While the books make no mention of Kíli carrying a bow, it is presumed by some readers.",
-        "image_source": "static/img/The-Hobbit-Fili-and-Kili.webp",
+        "image_source": "../static/img/The-Hobbit-Fili-and-Kili.webp",
         "url": "fili-and-kili"
     },
     {
         "name": "Óin",
         "description": "Óin was the older brother of Glóin, cousin of Dwalin and Balin, and uncle of Gimli. He usually wore a brown-hooded cloak when travelling. Óin fought in the Battle of Azanulbizar along with Thorin Oakenshield, and in TA 2941 joined with Thorin and Company on the quest to reclaim the Lonely Mountain wearing a brown hood. Óin was one of the Dwarves who bet that Bilbo would come along with them to reclaim the Lonely Mountain. Óin and his brother Glóin were usually in charge of preparing the fire for the Company. He fought in and survived the Battle of the Five Armies, and later settled in the Lonely Mountain along with many other of the Dwarves of The Company of Thorin such as Bombur.",
-        "image_source": "static/img/Oin_2.webp",
+        "image_source": "../static/img/Oin_2.webp",
         "url": "oin"
     },
     {
-        "name": "Gloin",
+        "name": "Glóin",
         "description": "In TA 2799, Glóin was known to have fought in the Battle of Azanulbizar, the last battle of the War of the Dwarves and Orcs. In TA 2941, Glóin and his brother Óin, along with his cousins Dwalin and Balin, were among the Dwarves accompanying Thorin and Company during their quest to the Lonely Mountain to recapture it from the Dragon Smaug. He was noted for his skills with a tinderbox, and, along with his brother Óin, was usually the one told to get a fire started whenever the Dwarves made camp. Gloin also fought in the Battle of the Five Armies. After the battle, he settled in the Lonely Mountain.",
-        "image_source": "static/img/Gloin_2.webp",
+        "image_source": "../static/img/Gloin_2.webp",
         "url": "gloin"
     },
     {
@@ -71,7 +71,7 @@
         "url": "bombur"
     },
     {
-        "name": "Gandalf",
+        "name": "Olórin (aka Gandalf)",
         "description": "Originally called Olórin, he was accounted as the wisest of the Maiar. He was a Maia of Manwë and Varda. He also served under two other Valar, such as Irmo and Nienna. When the Valar decided to send the order of the Istari (also known as Wizards) to Middle-earth, to counsel and assist all those in Middle-earth who opposed the Dark Lord Sauron, Manwë and Varda decided to include Olórin among the five who were sent.",
         "image_source": "https://vignette.wikia.nocookie.net/lotr/images/8/8d/Gandalf-2.jpg/revision/latest?cb=20130209172436",
         "url": "gandalf"

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {{ company[0]["name"] }}<br>
-    {{ company[1]["name"] }}
+    <!-- {{ company[0]["name"] }}<br>
+    {{ company[1]["name"] }} -->
 
     <h2>{{ page_title }}</h2>
     <p>
@@ -24,15 +24,15 @@
                     <p>{{ member.description }}</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="{{ member.image_source }}" alt="Thorin and Company member image"
-                        class="featurette-image image-responsive">
+                    <a href="/about/{{ member.url }}"><img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}"
+                        class="featurette-image image-responsive"></a>
                 </div>
 
             {% else %}
 
             <div class="col-md-5">
-                <img src="{{ member.image_source }}" alt="Thorin and Company member image"
-                    class="featurette-image image-responsive">
+                <a href="/about/{{ member.url }}"><img src="{{ member.image_source }}" alt="Profile image for {{ member.name }}"
+                    class="featurette-image image-responsive"></a>
             </div>    
             <div class="col-md-7">
                     <h3><a href="/about/{{ member.url }}">{{ loop.index }}. {{ member.name }}</a></h3>

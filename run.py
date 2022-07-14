@@ -52,7 +52,8 @@ def about_member(member_name):
         for object in data:
             if object["url"] == member_name:
                 member = object
-    return "<h1>" + member["name"] + "</h1>"
+    # return "<h1>" + member["name"] + "</h1>"
+    return render_template("member.html", member=member)
 
 
 @app.route("/contact")
