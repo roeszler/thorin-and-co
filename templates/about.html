@@ -6,172 +6,30 @@
 
     <h2>{{ page_title }}</h2>
     <p>
-        The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when Smaug came and took it.) Remembering that he had once known an adventurous Hobbit on his travels in the Shire, Gandalf decided to add Bilbo to their company because he knew that stealth and cunning were preferable to force. Gandalf also believed that someone like Bilbo could keep the sometimes prideful and stubborn Dwarves from rash action. The superstitious Dwarves also considered thirteen to be an unlucky number, and as Gandalf had planned to leave on other business, welcomed a fourteenth to fill into their party.
+        The formation of the group grew out of a meeting Gandalf had with Thorin in Bree which kindled Thorin's interest in
+        recapturing his long lost family inheritance. (Thorin's grandfather had been the king of the Lonely Mountain when
+        Smaug came and took it.) Remembering that he had once known an adventurous Hobbit on his travels in the Shire,
+        Gandalf decided to add Bilbo to their company because he knew that stealth and cunning were preferable to force.
+        Gandalf also believed that someone like Bilbo could keep the sometimes prideful and stubborn Dwarves from rash
+        action. The superstitious Dwarves also considered thirteen to be an unlucky number, and as Gandalf had planned to
+        leave on other business, welcomed a fourteenth to fill into their party.
     </p>
-    
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Thorin II Oakenshield</h3>
-            <p>
-                In the year TA 2746, Thorin II was born to Dwarven prince Thráin II in the mountain city of The Lonely Mountain. Early in his youth, he and the other Dwarves of the Lonely Mountain were forced to flee by the dragon Smaug in TA 2770. While in exile, he quickly grew to become a capable warrior. This was demonstrated when he
-                participated in the Battle of Azanulbizar in TA 2799. He marched with one of the Dwarven armies beneath the East-gate of Moria. At some point in the fighting, his shield broke, and using an oaken tree branch found on the floor as a shield,
-                he gained the epithet "Oakenshield," which would remain with him even in death.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Thorin Oakenshield with sword">
-        </div>
-    </div>
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Fíli and Kíli</h3>
-            <p>
-                Fíli and Kíli were nephews of Thorin, who was the elder brother of their mother Dís. They were also nephews of Frerin, grandsons of Thráin II, and great-grandsons of Thrór. Fíli's most distinguishing feature was his long nose, the longest of any of the Dwarves in Thorin's company.
-            </p>
-            <p>
-                Fíli and Kíli were the two most active Dwarves of Thorin's company, and apart from Balin, and possibly Bombur, they appeared more frequently as "individual" characters in J.R.R. Tolkien's novel than the rest of Thorin's companions, who were most often named only in "group" references to the entire company.
-            </p>
-            <p>
-                While on journeys, Fíli and Kíli both wore blue hoods, and played fiddles. They each carried a spade, presumably to forage, and to aid in building firepits, barriers, and traps. While the books make no mention of Kíli carrying a bow, it is presumed by some readers.
-            </p>
-        </div>
-    </div>
+    {% for member in company %}
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Óin</h3>
-            <p>
-                Along with his brother Glóin, Óin was a distant cousin of Thorin Oakenshield. A brave Northern Dwarf, Óin joins The Company of Thorin Oakenshield out of a sense of loyalty to his kin, and also because he has a substantial sum of money invested in the venture. Well read, with an inquiring mind, Óin was the healer among the Company, often applying an herbal salve of his own invention – which has since come to be known as 'ointment' after its maker.
-            </p>
+        <div class="row featurette">
+            {% if loop.index % 2 != 0 %}
+                <div class="col-md-7">
+                    <h3>{{ loop.index }}. {{ member.name }}</h3>
+                    <p>{{ member.description }}</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ member.image_source }}" alt="Thorin and Company member image"
+                        class="featurette-image image-responsive">
+                </div>
+            {% endif %}
         </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
 
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Glóin</h3>
-            <p>
-                In TA 2941, Glóin and his brother Óin, along with his cousins Dwalin and Balin, were among the Dwarves accompanying Thorin and Company during their quest to the Lonely Mountain to recapture it from the dragon Smaug. He was noted for his skills with a tinderbox, and, along with his brother Óin, was usually the one told to get a fire started whenever the Dwarves made camp. Glóin also fought in the Battle of the Five Armies. After the battle, he made his home in the Lonely Mountain.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Balin</h3>
-            <p>
-                Balin was likely born in the Lonely Mountain before the coming of the dragon Smaug. He had a younger brother named Dwalin, and was amongst those driven from their homes when Smaug attacked the Lonely Mountain. Afterwards, he may have lived in Dunland as a refugee, before fighting in the War of the Dwarves and Orcs which culminated in the Battle of Azanulbizar. Many years later, in approximately TA 2841, he accompanied Thráin II, the father of Thorin, when he attempted to go back to the Lonely Mountain himself, but Thráin was captured and lost.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Dwalin</h3>
-            <p>
-                <a href="https://lotr.fandom.com/wiki/Thorin_and_Company" alt="link to lotr fandom wiki page">WikiLink</a>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia consequuntur perspiciatis ipsam quidem! Vitae quidem illo, excepturi temporibus dolor, officiis consequatur dignissimos voluptas nam architecto corporis perspiciatis libero magni doloribus?
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Ori</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, est aspernatur esse reiciendis quos neque consequatur. Tenetur debitis, saepe suscipit odio doloremque dolores est incidunt fuga! Neque autem nam dolore.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Dori</h3>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam est odit deleniti harum blanditiis quod assumenda quam. Exercitationem eaque, aut culpa quidem rerum enim provident dolorem, ut dolores necessitatibus sit?
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Nori</h3>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime sapiente ratione ipsa vero ab unde fugit facere sunt atque a, dolor minima voluptatibus labore cum fuga, officiis autem, ipsum similique.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Bifur</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, quia illum numquam ex ipsa eveniet, repudiandae in aperiam consequuntur sit nemo amet molestiae quidem dolor eligendi quisquam obcaecati assumenda voluptatem!
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Bofur</h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus laboriosam veritatis soluta unde officia delectus tempore obcaecati tenetur eos. Sunt iure animi fugiat ipsam mollitia quibusdam aliquam voluptas exercitationem odio!
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='img/The-Hobbit-Fili-and-Kili.webp') }}" alt="Fili and Kili with swords">
-        </div>
-        <div class="col-md-7">
-            <h3>Bombur</h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, doloremque! Modi fugit, mollitia magni sequi in asperiores earum odit quibusdam sit saepe ex delectus error sapiente ut et? Quas, blanditiis.
-            </p>
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Gandalf</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos nam mollitia eos excepturi architecto, ex repellendus consectetur! Officia at delectus libero odio quae in itaque velit explicabo modi voluptatum!
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{ url_for('static', filename='/img/ThorinBIG.webp') }}" alt="Óin with staff">
-        </div>
-    </div>
-
+        <hr class="featurette-divider">
+    {% endfor %}
 {% endblock %}
