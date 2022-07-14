@@ -4,14 +4,15 @@ Import modules - including Flask class
 import os
 import json
 # capital F indicates its a class name
-from flask import (
-    Flask, render_template, request, flash
-)
+from flask import Flask, render_template, request, flash
+if os.path.exists("env.py"):
+    import env
 
 # create an instance of Flask class with argument as flask module
 # __name__. Flask needs this so that it knows where to look for
 # templates and static files
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 
 
 # ------------  @decorator (py-notation) as a way of wrapping functions.
@@ -69,6 +70,10 @@ def contact():
     if request.method == "POST":
         print(request.form.get("name")) # displays none
         print(request.form["email"]) # throws an exception
+        print(request.form["phone"]) # throws an exception
+        print(request.form["message"]) # throws an exception
+        flash("Thanks {}, we have received your message!".format(
+            request.form.get("name")))
     return render_template("contact.html", page_title="Contact")
 
 
