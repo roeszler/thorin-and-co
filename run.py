@@ -30,7 +30,7 @@ def about():
     """
     Define the about.html file pathway
     """
-    return render_template("about.html")
+    return render_template("about.html", variable_name_page_title="About")
 
 
 @app.route("/contact")
@@ -38,7 +38,7 @@ def contact():
     """
     Define the contact.html file pathway
     """
-    return render_template("contact.html")
+    return render_template("contact.html", variable_name_page_title="Contact")
 
 
 @app.route("/careers")
@@ -46,7 +46,9 @@ def careers():
     """
     Define the careers.html file pathway
     """
-    return render_template("careers.html")
+    return render_template(
+        "careers.html", variable_name_page_title="Come Work With Us!"
+        )
 
 
 # We're using the os module from the standard library to get the 'IP'
