@@ -4,7 +4,7 @@ Import modules - including Flask class
 import os
 import json
 # capital F indicates its a class name
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 
 # create an instance of Flask class with argument as flask module
 # __name__. Flask needs this so that it knows where to look for
@@ -46,21 +46,27 @@ def about():
 
 @app.route("/about/<member_name>")
 def about_member(member_name):
+    """
+    Define the about/<member_name> file pathway
+    """
     member = {}
     with open("data/company.json", "r") as json_data:
         data = json.load(json_data)
-        for object in data:
-            if object["url"] == member_name:
-                member = object
+        for obj in data:
+            if obj["url"] == member_name:
+                member = obj
     # return "<h1>" + member["name"] + "</h1>"
     return render_template("member.html", member=member)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     """
     Define the contact.html file pathway
     """
+    if request.method == "POST":
+        print(request.form.get("name")) # displays none
+        print(request.form["email"]) # throws an exception
     return render_template("contact.html", page_title="Contact")
 
 
