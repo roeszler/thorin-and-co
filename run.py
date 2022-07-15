@@ -16,8 +16,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 
 # ------------  @decorator (py-notation) as a way of wrapping functions.
-
-
 @app.route("/")  # "/" navigates to the root directory
 def index():
     """
@@ -32,7 +30,7 @@ def index():
 @app.route("/about")
 def about():
     """
-    Define the about.html file pathway
+    Defines the about.html file pathway
     Change the <h2> element where called on the about.html
     Iterates through the list of numbers and creates a paragraph at each
     """
@@ -50,7 +48,9 @@ def about():
 @app.route("/about/<member_name>")
 def about_member(member_name):
     """
-    Define the about/<member_name> file pathway
+    Defines the about/<member_name> file pathway
+    Opens the JSON data as read-only and 
+    iterates through each index providing a url link
     """
     member = {}
     with open("data/company.json", "r") as json_data:
@@ -66,6 +66,7 @@ def about_member(member_name):
 def contact():
     """
     Define the contact.html file pathway
+    Displays a change of state when the form is submitted
     """
     if request.method == "POST":
         print(request.form.get("name")) # displays none
@@ -92,7 +93,7 @@ def careers():
 # if it's not found. Same for port but as an integer
 
 
-if __name__ == "__main__":  # __main__ is the name of the default module in Py
+if __name__ == "__main__":  # "__main__" is the name of the default module in Py
     app.run(
         host=os.environ.get("IP", "0.0.0.0"),
         port=int(os.environ.get("PORT", "5000")),
