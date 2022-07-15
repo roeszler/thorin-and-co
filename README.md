@@ -1,6 +1,9 @@
-![YK logo](static/img/yodaKode-sml.png)
+[![YK logo](static/img/yodaKode-sml.png)](https://github.com/roeszler)
 
-Creating and running a Flask application.
+Site URL: https://thorin-flask-app-sr.herokuapp.com/about
+GitHub Repository: https://github.com/roeszler/thorin-and-co
+
+## Creating and running a Flask application.
 
 * $ Pip3 install flask
 * $ touch run.py
@@ -13,6 +16,74 @@ Creating and running a Flask application.
 * python3 run.py
 * ctrl + C (exits the terminal)
 
+## How to deploy our project using Heroku.
+
+```
+$ npm install -g heroku
+$ heroku login -i
+```
+1. Have created a Heroku app
+```
+$ heroku apps
+$ heroku apps:rename thorn-flask-app-stuart --app thorn-flask-app-sr
+```
+2. Link our local Git repository to Heroku
+```
+$ git status
+$ git add -A
+$ git status
+$ git remote -v
+
+$ git remote add heroku https://git.heroku.com/thorin-flask-app-sr.git
+$ git remote -v
+```
+3. Create a 'requirements.txt' file, which contains a list of our Python dependencies
+```
+$ pip3 freeze --local > requirements.txt
+$ git add -A
+$ git commit -m "add requirements.txt"
+$ git push -u heroku main
+```
+
+4. Create heroku Procfile
+A Procfile is a Heroku-specific type of file that tells Heroku how to run our project:
+```
+$ echo web: python run.py > Procfile
+```
+What this line does, is tells Heroku that it's going to be a web process, and the command to run our application is 'python run.py'
+```
+$ git add Procfile
+$ git commit -m "add Procfile"
+$ git push
+```
+5. View log file 
+```
+$ heroku logs --tail --app APP-NAME
+$ heroku logs --tail --app thorin-flask-app-sr
+```
+
+6. Add hidden / secret content
+We need to add any hidden environment variables, or Config Vars, within our App Settings.
+
+1. Reveal coffin vars (same as @ bottom of run.py file):
+
+IP 			0.0.0.0
+PORT 		5000
+SECRET_KEY 	secret_flash_key
+
+more > view logs
+more > restart dynos
+
+7. Connect directly to gitHub with automatic deploys and remove remote update link
+```
+$ git remote rm heroku
+$ git remote -v
+
+$ git add -A && git commit -m "push to git hub"
+$ git push origin main
+```
+
+---
 
 # Suggestions for a good README
 
