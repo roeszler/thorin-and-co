@@ -1,6 +1,7 @@
-[![YK logo](static/img/yodaKode-sml.png)](https://github.com/roeszler)
+[![YK logo](static/img/yodaKode-256.png)](https://github.com/roeszler)
 
 Site URL: https://thorin-flask-app-sr.herokuapp.com/about
+
 GitHub Repository: https://github.com/roeszler/thorin-and-co
 
 ## Creating and running a Flask application.
